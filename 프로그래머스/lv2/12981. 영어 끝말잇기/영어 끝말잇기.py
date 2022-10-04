@@ -9,3 +9,4 @@ def solution(n, words): # 먼저 탈락하는 사람의 번호, 몇 번째에 �
         last = words[w][-1]
     else:
         return [0,0]
+    # 굳이 answer = []에 append할 필요 없이 바로 return 해주면 됨
