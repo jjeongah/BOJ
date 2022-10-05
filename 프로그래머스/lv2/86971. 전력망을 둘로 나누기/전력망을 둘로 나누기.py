@@ -3,7 +3,6 @@ def bfs(start_node, visited, w):
     #start_node와 node의 연결을 끊었을 때의 한쪽 송전탑 개수
     q = deque()
     q.append(start_node) # q= deque([start_node])로 한 줄로 작성 가능
-    visited[start_node] = True
     num = 1 # 리턴할 송전탑 개수
     
     while q:
@@ -21,7 +20,7 @@ def solution(n, wires):
     
     # idea: 각 wire를 끊었을 때 값 일일이 비교 -> 완전 탐색
     # issue: 이어진 전선 개수 구하는 법 -> bfs
-    w = [[] for _ in range(n+1)] #
+    w = [[] for _ in range(n+1)] 
     for wire1, wire2 in wires: # tip: for wire in wires라고 하고 wire[0], wire[1] 말고
         w[wire1].append(wire2) # w[a][b]=1 / a와 b연결되어 있음 대신에
         w[wire2].append(wire1) # w[wire1][wire2] = 1, w[wire2][wire1] = 1
@@ -31,6 +30,7 @@ def solution(n, wires):
     for start_node, node in wires: # tip: 이 문제의 경우 2중 for문 할 필요 없음
         visited = [False]*(n+1) # 방문 여부 체크
         visited[node] = True
+        visited[start_node] = True
         num = bfs(start_node, visited, w) #start_node와 node 끊었을 때의 한쪽 송전탑 개수
         if abs(num - (n-num)) < answer:
             answer = abs(num-(n-num))
