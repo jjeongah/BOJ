@@ -3,7 +3,7 @@ def solution(s):
     s_list = s.split(' ')
     answer = []
     for s in s_list:
-        if s == "":
+        if s == "": #issue: 공백 여러 개일 때 어떻게 처리
             answer.append('')
         else:
             answer.append(s.capitalize())
