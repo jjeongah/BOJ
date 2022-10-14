@@ -10,16 +10,13 @@
 ### Week 4
 
 - 문제
-    - 10-10(월) 양궁대회
+    - 10-10(월) **양궁대회**
     [https://school.programmers.co.kr/learn/courses/30/lessons/92342](https://school.programmers.co.kr/learn/courses/30/lessons/92342)
-    - 10-11(화) 예상 대진표
-    ****[https://school.programmers.co.kr/learn/courses/30/lessons/12985](https://school.programmers.co.kr/learn/courses/30/lessons/12985)
-    - 10-12(수) 할인 행사
+    - 10-11(화) **예상 대진표**
+    [https://school.programmers.co.kr/learn/courses/30/lessons/12985](https://school.programmers.co.kr/learn/courses/30/lessons/12985)
+    - 10-12(수) **할인 행사**
     [https://school.programmers.co.kr/learn/courses/30/lessons/131127](https://school.programmers.co.kr/learn/courses/30/lessons/131127)
-    - 10-13(목)  주차 요금 계산
-        
-        [https://school.programmers.co.kr/learn/courses/30/lessons/92341](https://school.programmers.co.kr/learn/courses/30/lessons/92341)
-        
-    - 10-14(금) 후보 키
-        
-        [https://school.programmers.co.kr/learn/courses/30/lessons/42890](https://school.programmers.co.kr/learn/courses/30/lessons/42890)
+    - 10-13(목) **주차 요금 계산**
+    [https://school.programmers.co.kr/learn/courses/30/lessons/92341](https://school.programmers.co.kr/learn/courses/30/lessons/92341)
+    - 10-14(금) **후보 키**
+    [https://school.programmers.co.kr/learn/courses/30/lessons/42890](https://school.programmers.co.kr/learn/courses/30/lessons/42890)
