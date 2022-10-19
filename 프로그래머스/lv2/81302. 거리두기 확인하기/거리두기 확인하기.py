@@ -27,7 +27,7 @@ def solution(places):
                 if abs(i_x-j_x) + abs(i_y-j_y) > 2: # 거리로 성공
                     continue
                 
-                # 거리로도 실패했는데 파티션으로도 실패
+                # 거리로도 실패했고 파티션으로도 실패
                 if i_x == j_x and place[i_x][i_y+1] != 'X': # 행이나 열이 같을 때 파티션이 있는 경우
                     # tip! 어차피 거리 2일 때라 'X' in place[i_x][i_y:j_y] 할 필요 X
                     flag = 0
@@ -36,7 +36,7 @@ def solution(places):
                     flag = 0
                     break
                 if i_x != j_x and i_y != j_y and (place[i_x][j_y] != 'X' or place[j_x][i_y] != 'X'):
-                    # 행이나 열이 다른데(대각선) 파티션이 있는 경우
+                    # 행이나 열이 다른데(대각선) 파티션이 없는 경우
                     flag = 0
                     break
         answer.append(flag)
