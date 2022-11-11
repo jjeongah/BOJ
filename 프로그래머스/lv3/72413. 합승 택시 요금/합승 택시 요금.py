@@ -12,11 +12,11 @@ def dijkstra(graph, n, start, end):
         dist, node = heapq.heappop(q) # 그 노드까지의 거리, 다음 갈 수 있는 노드 
         if distance[node] < dist: # 뽑은 거리가 더 크면 방문한 셈치고 무시
             continue
-        for n_dist, n_node in graph[node]: # 다음 갈 수 있는 노드에 도착. 그 다음 노드 찾기
-            cost = distance[node] + n_node # (시작-> node 의 거리) + (node -> node의 인접 노드 거리)
-            if cost < distance[n_dist]: 
-                distance[n_dist] = cost
-                heapq.heappush(q, (cost, n_dist))
+        for next_node, next_cost in graph[node]: # 다음 갈 수 있는 노드에 도착. 그 다음 노드 찾기
+            cost = distance[node] + next_cost # (시작-> node 의 거리) + (node -> node의 인접 노드 거리)
+            if cost < distance[next_node]: 
+                distance[next_node] = cost
+                heapq.heappush(q, (cost, next_node))
                 
     return distance[end]
 
