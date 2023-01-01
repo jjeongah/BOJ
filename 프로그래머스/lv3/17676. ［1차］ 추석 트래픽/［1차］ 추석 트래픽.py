@@ -22,7 +22,7 @@ def get_time(time):
 # 시작 시간을 구하는 코드
 def get_start_time(time, duration):
     n_time = duration[:-1]
-    int_duration = int(float(n_time) * 1000)
+    int_duration = float(n_time) * 1000
     return get_time(time) - int_duration + 1
 
 def solution(lines):
