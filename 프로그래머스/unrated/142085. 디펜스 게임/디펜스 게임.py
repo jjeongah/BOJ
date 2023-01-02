@@ -15,13 +15,11 @@ def solution(n, k, enemy):
     for e in enemy:
         heappush(heap, -e) # 힙은 최솟값부터 pop하므로 -
         tmp += e
-        if tmp > n: # 무족권을 써야 함
-            if k == 0: # 무족권 다 씀
-                break
-            else: # 무족권 사용 가능
-                tmp += heappop(heap) #???
-                k -= 1
-        #print(heap, tmp)
-        answer += 1
-                
+        if tmp <= n: # 무족권 안 써도 됨
+            answer += 1
+        elif k > 0: # 무족권 써야 하고 쓸 수 있음
+            k -= 1
+            tmp += heappop(heap)
+            answer += 1
+        #print(heap, tmp)            
     return answer
