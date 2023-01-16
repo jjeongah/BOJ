@@ -25,7 +25,7 @@ def solution(money):
     # 1. 첫 집을 무조건 터는 경우
     dp = [0]*(len(money))
     dp[0] = money[0]
-    dp[1] = max(money[0], money[1]) # 첫 집을 무조건 털면 두 번째 집은 자동으로 못 터는 거 아닐까?
+    dp[1] = dp[0] # 첫 집을 무조건 털면 두 번째 집은 자동으로 못 터는 거 아닐까?
                                     # -> dp[2], dp[3]에서 고려해주기 위해
     for i in range(2, len(money)-1):
         dp[i] =  max(dp[i-2] + money[i], dp[i-1])
