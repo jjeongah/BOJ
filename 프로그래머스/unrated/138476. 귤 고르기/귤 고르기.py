@@ -1,18 +1,12 @@
-'''
-tan에서 k개를 담을 때
-크기 별로 분류했을 때 종류의 수를 최소화
+from collections import Counter
 
-종류의 수를 return
-'''
-from collections import Counter 
 
-def solution(k, tan):
-    #print(sorted(Counter(tan).items(), reverse=True, key=lambda x: x[1]))
-    cnt = 0
+def solution(k, tangerine):
     answer = 0
-    for size, num in sorted(Counter(tan).items(), reverse=True, key=lambda x: x[1]):
-        if cnt >= k:
-            break
-        cnt += num
-        answer += 1
+
+    for t, n in Counter(tangerine).most_common():
+        if k > 0:
+            k -= n
+            answer += 1
+
     return answer
